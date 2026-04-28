@@ -1,50 +1,65 @@
-# run-club-hub
 # Run Club Hub
 
-Run Club Hub is a full-stack Django web application built for runners who want to discover local runs, connect with other club members, and stay up to date with community activity.
+Run Club Hub is a Django web application built for a running club community. It allows users to view, create, update, and delete running event records through a web interface, while also providing additional pages for discussion and login. The project demonstrates relational database use, CRUD functionality, structured navigation, and responsive layout design.
 
-## Project Overview
+## Project Purpose
 
-The aim of Run Club Hub is to provide a central online space for a running club community. Users will be able to explore upcoming runs, engage with club content, and interact with a shared platform designed around club participation and event discovery.
-
-## Current Progress
-
-The project is currently in development. The initial homepage layout, shared base template, and project-level static styling have been set up.
+The purpose of Run Club Hub is to give a running club a simple platform to manage upcoming events and provide a central place for club members to navigate important pages. It provides value by allowing event information to be stored in a database and updated dynamically through the application.
 
 ## Features
 
-- Responsive homepage layout
-- Shared base template using Django template inheritance
-- Project-level static CSS setup
-- Bootstrap integration for styling and layout
-- Hero section for landing page presentation
+- Homepage with shared navigation bar
+- Events page displaying event records from the database
+- Full CRUD functionality for event records
+- Discussion page
+- Login page
+- Shared `base.html` template for consistent layout
+- Django admin panel for record management
+- Custom CSS styling
+- Bootstrap-based page structure
 
-## Tech Stack
+## CRUD Functionality
+
+Users can:
+- **Create** a new event
+- **Read** and view all existing events
+- **Update** existing event details
+- **Delete** existing events
+
+## Data Model
+
+The project currently uses a Django model for event records, storing information such as:
+- title
+- date
+- time
+- location
+- description
+
+These records are stored in the project database and displayed dynamically in the frontend templates.
+
+## Technologies Used
 
 - Python
 - Django
 - HTML
 - CSS
 - Bootstrap 5
-- SQLite3
+- SQLite
+- Git
+- GitHub
 
 ## Project Structure
 
-- `runclubhub/` – main Django project settings
-- `club/` – main app for site functionality
-- `templates/` – shared project templates
-- `static/` – project-level static files
-- `db.sqlite3` – local development database
+- `club/` - Django app containing models, views, URLs, forms, and templates
+- `runclubhub/` - project settings and main URL configuration
+- `templates/` - shared templates including `base.html`
+- `static/css/` - custom stylesheet
+- `TESTING.md` - manual testing documentation
+- `README.md` - project overview and setup instructions
 
-## Development Status
+## Installation and Setup
 
-Work is currently focused on building the core application structure before moving into database models, event features, authentication, and deployment.
-
-## Future Features
-
-- Event creation and event listings
-- Run detail pages
-- User authentication
-- Member interaction features
-- Admin management tools
-- Heroku deployment
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-url>
+   cd run-club-hub

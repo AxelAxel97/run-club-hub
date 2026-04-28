@@ -4,39 +4,46 @@
 
 ### Home Page
 - Opened the homepage successfully.
-- Confirmed the navbar displays Home, Events, Discussion, and Login.
+- Confirmed the navigation bar displays links for Home, Events, Discussion, and Login.
 - Confirmed the Home link returns to the homepage correctly.
 
 ### Events Page
-- Created a test event in Django admin.
-- Confirmed the event saved successfully in the database.
-- Added an `events` view in `views.py` to retrieve event data from the model.
-- Added a route for `/events/` in `club/urls.py`.
-- Created `club/templates/club/events.html` to display event information.
-- Confirmed the Events page loads correctly.
-- Confirmed event data is displayed on the page in date and time order.
+- Opened the Events page successfully from the navigation bar.
+- Confirmed event records display correctly on the page.
+- Confirmed events are listed in date and time order.
 
-### Navbar Testing
-- Tested the Events link in the homepage navbar.
-- Found the Events link was not working because it used `href="#"`.
-- Updated the link in `base.html` to use `{% url 'events' %}`.
-- Retested and confirmed the Events link now opens the Events page successfully.
+### Create Event
+- Clicked the **Add Event** button on the Events page.
+- Completed the event form with test data.
+- Submitted the form successfully.
+- Confirmed the new event appeared on the Events page after submission.
+
+### Update Event
+- Clicked the **Edit** button for an existing event.
+- Updated event details such as title or location.
+- Submitted the form successfully.
+- Confirmed the updated event details appeared correctly on the Events page.
+
+### Delete Event
+- Clicked the **Delete** button for an existing event.
+- Opened the delete confirmation page successfully.
+- Confirmed deletion of the selected event.
+- Confirmed the event was removed from the Events page.
 
 ### Discussion Page
-- Created `discussion.html` inside `club/templates/club/`.
-- Added a `discussion` view in `views.py`.
-- Added a `/discussion/` route in `club/urls.py`.
-- Updated the navbar link to use `{% url 'discussion' %}`.
-- Confirmed the Discussion page opens correctly from the navbar.
+- Opened the Discussion page from the navigation bar successfully.
+- Confirmed the page content displayed correctly.
 
 ### Login Page
-- Created `login.html` inside `club/templates/club/`.
-- Added a `login` view in `views.py`.
-- Added a `/login/` route in `club/urls.py`.
-- Updated the navbar link to use `{% url 'login' %}`.
-- Confirmed the Login page opens correctly from the navbar.
+- Opened the Login page from the navigation bar successfully.
+- Confirmed the login form fields display correctly.
 
-## Outcome
-- The project now has a working homepage, events page, discussion page, and login page.
-- Navigation between all pages is working correctly.
-- Event data can be added through Django admin and displayed dynamically on the frontend.
+### Admin Panel
+- Logged into the Django admin panel successfully.
+- Confirmed event records can be created and managed in the admin area.
+
+## Validation Summary
+- CRUD functionality for events is working correctly.
+- Navigation between all main pages is functioning correctly.
+- Event data is stored in the database and displayed dynamically on the frontend.
+- Shared layout and templates are working consistently across pages.

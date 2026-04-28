@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete Event | Run Club Hub{% endblock %}
+
+{% block content %}
+<div class="container mt-5" style="max-width: 700px;">
+    <h1 class="mb-4">Delete Event</h1>
+
+    <div class="card p-4">
+        <p>Are you sure you want to delete <strong>{{ event.title }}</strong>?</p>
+
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a href="{% url 'events' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+</div>
+{% endblock %}
