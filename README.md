@@ -57,9 +57,3 @@ These records are stored in the project database and displayed dynamically in th
 - `TESTING.md` - manual testing documentation
 - `README.md` - project overview and setup instructions
 
-## Installation and Setup
-
-1. Clone the repository:
-   ```bash
-   git clone <your-repository-url>
-   cd run-club-hub
