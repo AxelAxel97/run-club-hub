@@ -4,13 +4,37 @@
 
 {% block content %}
 <div class="container mt-5" style="max-width: 500px;">
-    <h1 class="mb-4">Create an Account</h1>
 
     <div class="card p-4">
+        <h1 class="mb-4 text-center">Create an Account!</h1>
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-dark w-100 mt-3">Register</button>
+
+            <div class="mb-3">
+                <label for="id_username" class="form-label">Username</label>
+                <input type="text" name="username" class="form-control" id="id_username" maxlength="150" required>
+                {% if form.username.errors %}
+                    <div class="text-danger small mt-1">{{ form.username.errors.0 }}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_password1" class="form-label">Password</label>
+                <input type="password" name="password1" class="form-control" id="id_password1" required>
+                {% if form.password1.errors %}
+                    <div class="text-danger small mt-1">{{ form.password1.errors.0 }}</div>
+                {% endif %}
+            </div>
+
+            <div class="mb-3">
+                <label for="id_password2" class="form-label">Confirm Password</label>
+                <input type="password" name="password2" class="form-control" id="id_password2" required>
+                {% if form.password2.errors %}
+                    <div class="text-danger small mt-1">{{ form.password2.errors.0 }}</div>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn btn-dark w-100 mt-2">Register</button>
         </form>
         <p class="text-center mt-3">
             Already have an account? <a href="{% url 'login' %}">Login here</a>
