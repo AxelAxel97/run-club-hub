@@ -94,9 +94,24 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
+LOGIN_URL = '/login/'
+
+from django.contrib.messages import constants as messages
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'secondary',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
+
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [BASE_DIR / 'static']
+
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
