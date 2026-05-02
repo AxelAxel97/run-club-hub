@@ -1,0 +1,26 @@
+[
+{
+  "model": "club.event",
+  "pk": 1,
+  "fields": {
+    "title": "Beginner 5K Social Run",
+    "date": "2026-04-29",
+    "time": "18:00:00",
+    "location": "Regents Park",
+    "description": "Please make sure to bring your wacky tie",
+    "created_on": "2026-04-27T07:44:51.172Z"
+  }
+},
+{
+  "model": "club.event",
+  "pk": 2,
+  "fields": {
+    "title": "Pro 20k Run",
+    "date": "2026-04-30",
+    "time": "05:30:00",
+    "location": "Holland park",
+    "description": "Doth thy dare challenge me ?!",
+    "created_on": "2026-04-28T22:14:38.738Z"
+  }
+}
+]
