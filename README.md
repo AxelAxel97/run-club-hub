@@ -39,14 +39,21 @@ These records are stored in the project database and displayed dynamically in th
 
 ## Technologies Used
 
-- Python
-- Django
-- HTML
-- CSS
-- Bootstrap 5
-- SQLite
-- Git
-- GitHub
+| Technology | Purpose |
+|---|---|
+| Python 3.12 | Backend language |
+| Django 5.x | Web framework |
+| PostgreSQL | Production database (Heroku) |
+| SQLite | Local development database |
+| Bootstrap 5 | Responsive layout, cards, badges, and utility classes |
+| HTML5 / CSS3 | Templates and custom styles |
+| Unicode Emoji | Visual icons throughout the UI (no library required) |
+| Font Awesome 6 | Social media icons in footer |
+| WhiteNoise | Static file serving in production |
+| Gunicorn | Production WSGI server |
+| Heroku | Cloud deployment platform |
+| Git / GitHub | Version control |
+
 
 ## Project Structure
 
