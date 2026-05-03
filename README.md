@@ -25,108 +25,51 @@ Wireframes were created at the beginning of the project to plan the layout and s
 
 ### Home Page
 
-+--------------------------------------------------+
-|  NAVBAR: Run Club Hub       Login | Register     |
-+--------------------------------------------------+
-|                                                  |
-|   Find your next group run                       |
-|                                                  |
-|   Join your local running community,             |
-|   discover events, and stay connected            |
-|   with other runners!                            |
-|                                                  |
-|              [HERO IMAGE]                        |
-|                                                  |
-+--------------------------------------------------+
-|         Welcome to Run Club Hub                  |
-|   Run Club Hub is a community platform...        |
-+--------------------------------------------------+
-|  FOOTER: Follow us! [FB] [IG] [X]               |
-|  2026 Run Club Hub. All rights reserved.         |
-+--------------------------------------------------+
+| Section | Content |
+|---|---|
+| **Navbar** | Run Club Hub &nbsp;\|&nbsp; Login &nbsp;\|&nbsp; Register |
+| **Hero** | Find your next group run \| Join your local running community \| Discover events and stay connected with other runners! \| [HERO IMAGE] |
+| **Welcome** | Welcome to Run Club Hub \| Run Club Hub is a community platform... |
+| **Footer** | Follow us: [FB] [IG] [X] &nbsp;\|&nbsp; © 2026 Run Club Hub. All rights reserved. |
 
+---
 
-### Evernts Page 
+### Events Page
 
-+--------------------------------------------------+
-|  NAVBAR: Run Club Hub    Hello, user | Logout    |
-+--------------------------------------------------+
-|  Events                        [+ Add Event]     |
-+--------------------------------------------------+
-|  +--------------------------------------------+  |
-|  | Event Title                                |  |
-|  | Date: 01/06/2026  Time: 07:00              |  |
-|  | Location: Holland Park                     |  |
-|  | Description: Morning 10K group run...      |  |
-|  |                          [Edit] [Delete]   |  |
-|  +--------------------------------------------+  |
-|                                                  |
-|  +--------------------------------------------+  |
-|  | Event Title                                |  |
-|  | Date: 08/06/2026  Time: 09:00              |  |
-|  | Location: City Centre                      |  |
-|  | Description: Casual 5K social run...       |  |
-|  +--------------------------------------------+  |
-+--------------------------------------------------+
-|  FOOTER                                          |
-+--------------------------------------------------+
+| Section | Content |
+|---|---|
+| **Navbar** | Run Club Hub &nbsp;\|&nbsp; Hello, user &nbsp;\|&nbsp; Logout |
+| **Actions** | Events &nbsp;\|&nbsp; [+ Add Event] |
+| **Event Card 1** | **Title:** Morning 10K \| **Date:** 01/06/2026 \| **Time:** 07:00 \| **Location:** Holland Park \| **Description:** Morning 10K group run... \| [Edit] [Delete] |
+| **Event Card 2** | **Title:** Casual 5K \| **Date:** 08/06/2026 \| **Time:** 09:00 \| **Location:** City Centre \| **Description:** Casual 5K social run... |
+| **Footer** | — |
 
-### Add Event 
+---
 
-+--------------------------------------------------+
-|  NAVBAR: Run Club Hub    Hello, user | Logout    |
-+--------------------------------------------------+
-|  Add New Event                                   |
-+--------------------------------------------------+
-|  +--------------------------------------------+  |
-|  |  Title:       [________________________]   |  |
-|  |  Date:        [________________________]   |  |
-|  |  Time:        [________________________]   |  |
-|  |  Location:    [________________________]   |  |
-|  |  Description: [________________________]   |  |
-|  |               [________________________]   |  |
-|  |                                            |  |
-|  |                    [Save Event]            |  |
-|  +--------------------------------------------+  |
-+--------------------------------------------------+
-|  FOOTER                                          |
-+--------------------------------------------------+
+### Add Event Page
 
-### Discussions 
+| Section | Content |
+|---|---|
+| **Navbar** | Run Club Hub &nbsp;\|&nbsp; Hello, user &nbsp;\|&nbsp; Logout |
+| **Form** | Add New Event |
+| **Fields** | Title: [ ] \| Date: [ ] \| Time: [ ] \| Location: [ ] \| Description: [ ] |
+| **Action** | [Save Event] |
+| **Footer** | — |
 
-+--------------------------------------------------+
-|  NAVBAR: Run Club Hub    Hello, user | Logout    |
-+--------------------------------------------------+
-|  Discussion Board                                |
-+--------------------------------------------------+
-|  +--------------------------------------------+  |
-|  | [PIN] PINNED  - Posted by Admin            |  |
-|  | Welcome to the Run Club Hub Discussion!    |  |
-|  | This is your space to connect with fellow  |  |
-|  | runners...                                 |  |
-|  +--------------------------------------------+  |
-|                                                  |
-|  +--------------------------------------------+  |
-|  | [ROUTES]  - Posted by Sarah K. - 2 days ago|  |
-|  | Best routes for a Sunday long run?         |  |
-|  | Looking for something scenic around 12km.. |  |
-|  |  > Mike T: The riverside loop is great!    |  |
-|  +--------------------------------------------+  |
-|                                                  |
-|  +--------------------------------------------+  |
-|  | [RACING]  - Posted by Dan R. - 4 days ago  |  |
-|  | Anyone targeting a sub-25 5K this season?  |  |
-|  |  > Emma W: I am! Let's coordinate a run.   |  |
-|  +--------------------------------------------+  |
-|                                                  |
-|  +--------------------------------------------+  |
-|  | [TRAINING] - Posted by Priya M. - 6 days   |  |
-|  | Favourite recovery tips after a long run?  |  |
-|  |  > Tom B: Foam rolling and protein meal!   |  |
-|  +--------------------------------------------+  |
-+--------------------------------------------------+
-|  FOOTER                                          |
-+--------------------------------------------------+
+---
+
+### Discussions Page
+
+| Section | Content |
+|---|---|
+| **Navbar** | Run Club Hub &nbsp;\|&nbsp; Hello, user &nbsp;\|&nbsp; Logout |
+| **Header** | Discussion Board |
+| **Pinned Post** | 📌 [PIN] PINNED - Posted by Admin \| Welcome to the Run Club Hub Discussion! \| This is your space to connect with fellow runners... |
+| **Post 1** | [ROUTES] - Posted by Sarah K. - 2 days ago \| Best routes for a Sunday long run? \| Looking for something scenic around 12km.. \| > Mike T: The riverside loop is great! |
+| **Post 2** | [RACING] - Posted by Dan R. - 4 days ago \| Anyone targeting a sub-25 5K this season? \| > Emma W: I am! Let's coordinate a run. |
+| **Post 3** | [TRAINING] - Posted by Priya M. - 6 days ago \| Favourite recovery tips after a long run? \| > Tom B: Foam rolling and protein meal! |
+| **Footer** | — |
+
 
 ## User Goals and Stories
 
