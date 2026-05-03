@@ -4,7 +4,9 @@
 {% block title %}Home | Run Club Hub{% endblock %}
 
 {% block content %}
-<section class="hero-section text-white d-flex align-items-center">
+<section class="hero-section text-white d-flex align-items-center"
+    style="background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url('{% static 'images/hero.jpg' %}') center/cover no-repeat;">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -12,8 +14,6 @@
                 <p class="lead mb-4">
                     Join your local running community, discover events, and stay connected with other runners!
                 </p>
-                <a href="#" class="btn btn-warning btn-lg me-2">View Runs</a>
-                <a href="#" class="btn btn-outline-light btn-lg">Join Club</a>
             </div>
         </div>
     </div>
