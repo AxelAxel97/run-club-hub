@@ -1,123 +1,314 @@
 # Run Club Hub
 
-Run Club Hub is a Django web application built for a running club community. It allows users to view, create, update, and delete running event records through a web interface, while also providing additional pages for discussion and login. The project demonstrates relational database use, CRUD functionality, structured navigation, and responsive layout design.
+Run Club Hub is a Django web application built for a running club community. It allows users to register an account, browse upcoming running events, and create, edit, or delete their own events. This site was developed using Python (Django), HTML, CSS and by storing data in a PostgreSQL database.
 
-## Project Purpose
+[Live Website](https://run-club-hub-4c7ff48afff2.herokuapp.com/)
 
-The purpose of Run Club Hub is to give a running club a simple platform to manage upcoming events and provide a central place for club members to navigate important pages. It provides value by allowing event information to be stored in a database and updated dynamically through the application.
+---
+
+## Table of Contents
+
+- [User Goals and Stories](#user-goals-and-stories)
+- [Design](#design)
+- [Development](#development)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
+---
+
+## User Goals and Stories
+
+### User goals
+- As a user I want to:
+  - Easily and intuitively navigate throughout the website
+  - Browse the website naturally and with ease
+  - Be able to view the website and read all information on all screen sizes
+  - Create an account on the website
+  - View all upcoming running events
+  - Create my own running events
+  - Manage my events and edit or delete them if needed
+
+### Business owner goals
+- As the website business owner I want to:
+  - Provide users with information about the running club
+  - Allow users to easily access and use the site
+  - Allow users to create and manage running events
+  - Allow users to edit and delete their own events
+  - Provide a discussion space for club members
+  - Provide social media links to users
+
+### User Stories
+
+#### As a user
+  - As a user I want to visit the website and understand its purpose immediately
+  - As a user I want to easily understand how to use the website
+  - As a user I want to create an account easily
+  - As a user I want to view all upcoming running events
+  - As a user I want to create a new event with ease
+  - As a user I want the ability to edit my own events
+  - As a user I want the ability to delete my own events
+  - As a user I want to receive clear feedback when I complete an action
+  - As a user I want to have an enjoyable experience
+  - As a user I want to return to the site to manage my events
+
+#### As a website business owner
+  - As a site owner I want to allow for a good user experience
+  - As a site owner I want to allow the user to easily navigate the website without issues
+  - As a site owner I want to encourage users to create an account
+  - As a site owner I want to encourage users to create and manage events
+  - As a site owner I want the user to have a positive experience by allowing them to edit or delete their own events
+  - As a site owner I want only authenticated users to be able to create or modify events
+
+#### As a new user
+  - As a new user I want to navigate the page intuitively and with ease
+  - As a new user I want to understand the page purpose upon first viewing
+  - As a new user I want to see the club's social media presence
+  - As a new user I want to easily create an account
+  - As a new user I want to easily browse upcoming events
+  - As a new user I want to easily create my own event
+  - As a new user I want to edit or delete an event I created
+  - As a new user I want to enjoy the experience and return to the site
+
+---
+
+## Design
+
+### Font
+Bootstrap 5's default font stack was used throughout the project. This provides clean, readable typography across all devices without requiring additional font imports.
+
+### Colours
+The site uses a dark navbar and footer (bg-dark) with white text for strong contrast, combined with Bootstrap's default white card backgrounds and muted text for secondary content. This creates a clean, high-contrast design suited to an active sports community.
+
+### Data Model
+
+| Field | Type | Notes |
+|---|---|---|
+| title | CharField | Max 200 characters |
+| date | DateField | Event date |
+| time | TimeField | Event time |
+| location | CharField | Max 200 characters |
+| description | TextField | Full event description |
+| created_on | DateTimeField | Auto-set on creation |
+| created_by | ForeignKey (User) | Links event to its creator; SET_NULL on user delete |
+
+---
+
+## Development
+
+### Agile Methodology
+
+This project was developed using the Agile methodology. User stories and tasks were tracked across the following epics:
+
+**Epic 1 - Initial Setup**
+  - As a developer, I need to create the base.html page and structure so that other pages can reuse the layout
+  - As a developer, I need to create static resources so that images and CSS work on the website
+  - As a developer, I need to set up the project so that it is ready for implementing the core features
+  - As a developer, I need to create the footer with social media links
+  - As a developer, I need to create the navbar so that users can navigate the website from any device
+
+**Epic 2 - User Registration and Authentication**
+  - As a developer, I need to implement the Register page using Django's built-in UserCreationForm
+  - As a developer, I need to implement the Login page using Django's AuthenticationForm
+  - As a developer, I need to implement Logout functionality
+  - As a site owner, I want protected pages to redirect unauthenticated users to the login page
+
+**Epic 3 - Event Management (CRUD)**
+  - As a user, I would like to be able to create a new running event
+  - As a user, I would like to view all upcoming events ordered by date and time
+  - As a user, I would like to be able to edit my own events
+  - As a user, I would like to delete my own events when I no longer need them
+
+**Epic 4 - Deployment**
+  - As a developer, I need to deploy the project to Heroku so that it is live for users
+  - As a developer, I need to configure PostgreSQL as the production database
+  - As a developer, I need to configure WhiteNoise for static file serving
+
+**Epic 5 - Documentation**
+  - Complete README documentation
+  - Complete TESTING.md documentation
+
+---
+
+## Technologies Used
+- **Python** - the main language used in this project
+- **Django** - the web framework used to build the application
+- **HTML** - used to structure all templates
+- **CSS** - used for custom styling
+- **Bootstrap 5** - used for predefined styled elements and responsive layout
+- **Font Awesome** - used for social media icons in the footer
+- **Unicode Emoji** - used as visual icons throughout the UI (no library required)
+- **PostgreSQL** - production database hosted on Heroku
+- **SQLite** - local development database
+- **WhiteNoise** - for serving static files in production
+- **Gunicorn** - production WSGI server
+- **GitHub** - used to host the repository
+- **Git** - used to commit and push code during development
+- **Heroku** - used to host the deployed live site
+- **Favicon.io** - used for generating the website favicon
+- **Chrome Dev Tools** - used for debugging and testing responsiveness
+- **CI Python Linter** - used for validating Python code
+
+---
 
 ## Features
 
-- Homepage with shared navigation bar
-- Events page displaying event records from the database
-- Full CRUD functionality for event records
-- Discussion page
-- Login page
-- Shared `base.html` template for consistent layout
-- Django admin panel for record management
-- Custom CSS styling
-- Bootstrap-based page structure
+### Existing Features
 
-## CRUD Functionality
+- **Home Page**
+  - This is the first page the user sees when they arrive on the website. The primary goal is to allow the user to understand the purpose of the website immediately.
+  - A clear navigation bar makes it intuitive for the user to navigate to all sections of the site.
+  - The footer section provides social media links so users can follow the club online.
 
-Users can:
-- **Create** a new event
-- **Read** and view all existing events
-- **Update** existing event details
-- **Delete** existing events
+- **Events Page**
+  - Displays all upcoming running events stored in the database, ordered by date and time.
+  - Each event card shows the title, date, time, location, and description.
+  - Logged-in users who created an event will see Edit and Delete buttons on their own events.
 
-## Data Model
+- **Add Event Page**
+  - Logged-in users can create a new event by filling out a simple form.
+  - Unauthenticated users are redirected to the Login page if they attempt to access this page.
 
-The project currently uses a Django model for event records, storing information such as:
-- title
-- date
-- time
-- location
-- description
+- **Edit Event Page**
+  - Allows the event creator to update an existing event's details.
+  - Only the user who created the event can edit it - other users are shown a permission denied message.
 
-These records are stored in the project database and displayed dynamically in the frontend templates.
+- **Delete Event Page**
+  - Allows the event creator to delete one of their events via a confirmation page.
+  - Only the user who created the event can delete it - other users are shown a permission denied message.
 
-## Technologies Used
+- **Discussion Page**
+  - Provides a community discussion board with pinned announcements and threads covering routes, racing goals, recovery tips, and meetup planning.
 
-| Technology | Purpose |
-|---|---|
-| Python 3.12 | Backend language |
-| Django 5.x | Web framework |
-| PostgreSQL | Production database (Heroku) |
-| SQLite | Local development database |
-| Bootstrap 5 | Responsive layout, cards, badges, and utility classes |
-| HTML5 / CSS3 | Templates and custom styles |
-| Unicode Emoji | Visual icons throughout the UI (no library required) |
-| Font Awesome 6 | Social media icons in footer |
-| WhiteNoise | Static file serving in production |
-| Gunicorn | Production WSGI server |
-| Heroku | Cloud deployment platform |
-| Git / GitHub | Version control |
+- **Register Page**
+  - New users can create an account with a username and password.
+  - Upon successful registration, the user is automatically logged in and redirected to the homepage with a flash message.
 
+- **Login Page**
+  - Existing users can log in with their username and password.
+  - Upon successful login, a flash message confirms the login and the navbar updates to show their username.
 
-## Project Structure
+- **Logout**
+  - Logged-in users can log out via the navbar button.
+  - A flash message confirms the logout.
 
-- `club/` - Django app containing models, views, URLs, forms, and templates
-- `runclubhub/` - project settings and main URL configuration
-- `templates/` - shared templates including `base.html`
-- `static/css/` - custom stylesheet
-- `TESTING.md` - manual testing documentation
-- `README.md` - project overview and setup instructions
+- **Flash Messages**
+  - Success and error messages display after every key user action including login, logout, register, create event, edit event, and delete event.
+
+- **Navigation Menu**
+  - The navigation bar is present on all pages.
+  - When logged out: Login and Register links are shown.
+  - When logged in: the user's username and a Logout button are shown.
+
+  The following navigation items are available on all pages:
+
+  Home -> home.html - Visible to all
+
+  Events -> events.html - Visible to all
+
+  Discussion -> discussion.html - Visible to all
+
+  Add Event -> add_event.html - Visible to logged in users only
+
+  Logout - Visible to logged in users only
+
+  Login -> login.html - Visible to logged out users only
+
+  Register -> register.html - Visible to logged out users only
+
+- **Favicon**
+  - A custom favicon sits in the browser tab allowing users to instantly recognise the webpage.
+
+### Features Left to Implement
+  - A real-time discussion board where users can post and reply to messages
+  - User profile pages with personal bests and event history
+  - Email confirmation on registration
+  - Event image uploads
+  - Search and filter functionality on the Events page
+
+---
+
+## Testing
+
+Full manual testing has been documented in [TESTING.md](TESTING.md).
+
+### User Testing
+
+The application was tested on a MacBook Pro using the Google Chrome browser.
+
+It was also tested using Chrome DevTools across the following screen sizes:
+- Mobile (375px)
+- Tablet (768px)
+- Desktop (1280px+)
+
+All screen sizes worked as intended.
+
+### Validator Testing
+
+- **Python** - No errors were found when passing through the [CI Python Linter](https://pep8ci.herokuapp.com/)
+- **HTML** - Tested using the [W3C HTML Validator](https://validator.w3.org/)
+- **CSS** - Tested using the [W3C CSS Validator (Jigsaw)](https://jigsaw.w3.org/css-validator/)
+
+### Bugs
+
+- **Login form not submitting** - The original login template was missing method="POST" and the csrf_token tag, causing the form to silently do nothing on submission. Fixed by rewriting the login template to use Django's AuthenticationForm with proper POST handling.
+
+- **Register page showing overwhelming help text** - Django's default form.as_p rendered all built-in password help text. Fixed by rendering each field manually and only displaying error messages when validation fails.
+
+- **Flash messages not rendering** - The MESSAGE_TAGS setting was missing from settings.py, causing Bootstrap alert classes to not map correctly. Fixed by adding the MESSAGE_TAGS configuration.
+
+- **@login_required redirecting to wrong URL** - Django's default login redirect pointed to /accounts/login/ which did not exist. Fixed by adding LOGIN_URL = '/login/' to settings.py.
+
+- **Existing events breaking after adding created_by** - Adding a ForeignKey field to the Event model would have caused existing records to fail migration. Fixed by setting null=True, blank=True on the created_by field.
+
+### Unfixed Bugs
+- There are no current bugs that we are aware of.
+
+---
 
 ## Deployment
 
-The live site is deployed on Heroku and can be accessed here:
+The live site is deployed on Heroku:
 
 **Live site:** https://run-club-hub-4c7ff48afff2.herokuapp.com/
 
-### How to deploy
+### Steps to deploy
 
 1. Create a Heroku account at https://heroku.com
-2. Install the Heroku CLI with `brew install heroku`
-3. Log in with `heroku login`
-4. Create the app with `heroku create`
-5. Add Postgres with `heroku addons:create heroku-postgresql:essential-0`
-6. Set config vars: `SECRET_KEY`, `DEBUG`
-7. Push code with `git push heroku main`
-8. Run migrations with `heroku run python manage.py migrate`
+2. Install the Heroku CLI: `brew install heroku`
+3. Log in: `heroku login`
+4. Create the app: `heroku create`
+5. Add Postgres: `heroku addons:create heroku-postgresql:essential-0`
+6. Set config vars: `heroku config:set SECRET_KEY=your-secret-key` and `heroku config:set DEBUG=False`
+7. Push code: `git push heroku main`
+8. Run migrations: `heroku run python manage.py migrate`
+9. Create a superuser: `heroku run python manage.py createsuperuser`
+10. Load fixture data (optional): `heroku run python manage.py loaddata sample_events`
 
-### Local development
+### Local Development
 
-1. Clone the repository
+1. Clone the repository: `git clone https://github.com/your-username/run-club-hub.git`
 2. Create a virtual environment: `python3 -m venv venv`
 3. Activate it: `source venv/bin/activate`
 4. Install dependencies: `pip install -r requirements.txt`
-5. Run the server: `python3 manage.py runserver`
-6. Access locally at: `http://127.0.0.1:8000/`
+5. Run migrations: `python manage.py migrate`
+6. Start the server: `python manage.py runserver`
+7. Access at: http://127.0.0.1:8000/
 
+---
 
+## Credits
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- [Django Documentation](https://docs.djangoproject.com/) - framework reference
+- [Bootstrap 5](https://getbootstrap.com/) - responsive layout and components
+- [Font Awesome](https://fontawesome.com/) - social media icons
+- [WhiteNoise](http://whitenoise.evans.io/) - static file serving in production
+- [Heroku](https://heroku.com) - cloud deployment platform
+- [dj-database-url](https://github.com/jazzband/dj-database-url) - database URL configuration
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - Python code validation
+- [Favicon.io](https://favicon.io/) - favicon generation
 
 
 
