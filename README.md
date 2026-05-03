@@ -431,6 +431,8 @@ The live site is deployed on Heroku:
 - The Django documentation was one of the main resources used throughout development - [Django Documentation](https://docs.djangoproject.com/)
 - A lot of the Python and Django coding was supported by tutorials at [W3Schools](https://www.w3schools.com/)
 - Bootstrap 5 documentation was used extensively for layout and components - [Bootstrap Docs](https://getbootstrap.com/docs/5.3/)
+- - [Claude Sonnet](https://www.anthropic.com/claude) by Anthropic was used as an AI assistant to help with debugging, code suggestions, and README writing throughout the project
+- The [Code Institute Slack community](https://code-institute-room.slack.com/) was a valuable resource for troubleshooting and peer support during development
 - Stack Overflow was used to help solve minor Django related bugs throughout development
 - The following YouTube tutorials were helpful during development:
   - [Learn Django in 20 Minutes - Tech With Tim](https://www.youtube.com/watch?v=nGIg40xs9e4)
