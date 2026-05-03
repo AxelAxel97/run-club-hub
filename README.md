@@ -8,6 +8,7 @@ Run Club Hub is a Django web application built for a running club community. It 
 
 ## Table of Contents
 
+- [Wireframes](#wireframes)
 - [User Goals and Stories](#user-goals-and-stories)
 - [Design](#design)
 - [Development](#development)
@@ -18,6 +19,114 @@ Run Club Hub is a Django web application built for a running club community. It 
 - [Credits](#credits)
 
 ---
+## Wireframes
+
+Wireframes were created at the beginning of the project to plan the layout and structure of each page before development began.
+
+### Home Page
+
++--------------------------------------------------+
+|  NAVBAR: Run Club Hub       Login | Register     |
++--------------------------------------------------+
+|                                                  |
+|   Find your next group run                       |
+|                                                  |
+|   Join your local running community,             |
+|   discover events, and stay connected            |
+|   with other runners!                            |
+|                                                  |
+|              [HERO IMAGE]                        |
+|                                                  |
++--------------------------------------------------+
+|         Welcome to Run Club Hub                  |
+|   Run Club Hub is a community platform...        |
++--------------------------------------------------+
+|  FOOTER: Follow us! [FB] [IG] [X]               |
+|  2026 Run Club Hub. All rights reserved.         |
++--------------------------------------------------+
+
+
+### Evernts Page 
+
++--------------------------------------------------+
+|  NAVBAR: Run Club Hub    Hello, user | Logout    |
++--------------------------------------------------+
+|  Events                        [+ Add Event]     |
++--------------------------------------------------+
+|  +--------------------------------------------+  |
+|  | Event Title                                |  |
+|  | Date: 01/06/2026  Time: 07:00              |  |
+|  | Location: Holland Park                     |  |
+|  | Description: Morning 10K group run...      |  |
+|  |                          [Edit] [Delete]   |  |
+|  +--------------------------------------------+  |
+|                                                  |
+|  +--------------------------------------------+  |
+|  | Event Title                                |  |
+|  | Date: 08/06/2026  Time: 09:00              |  |
+|  | Location: City Centre                      |  |
+|  | Description: Casual 5K social run...       |  |
+|  +--------------------------------------------+  |
++--------------------------------------------------+
+|  FOOTER                                          |
++--------------------------------------------------+
+
+### Add Event 
+
++--------------------------------------------------+
+|  NAVBAR: Run Club Hub    Hello, user | Logout    |
++--------------------------------------------------+
+|  Add New Event                                   |
++--------------------------------------------------+
+|  +--------------------------------------------+  |
+|  |  Title:       [________________________]   |  |
+|  |  Date:        [________________________]   |  |
+|  |  Time:        [________________________]   |  |
+|  |  Location:    [________________________]   |  |
+|  |  Description: [________________________]   |  |
+|  |               [________________________]   |  |
+|  |                                            |  |
+|  |                    [Save Event]            |  |
+|  +--------------------------------------------+  |
++--------------------------------------------------+
+|  FOOTER                                          |
++--------------------------------------------------+
+
+### Discussions 
+
++--------------------------------------------------+
+|  NAVBAR: Run Club Hub    Hello, user | Logout    |
++--------------------------------------------------+
+|  Discussion Board                                |
++--------------------------------------------------+
+|  +--------------------------------------------+  |
+|  | [PIN] PINNED  - Posted by Admin            |  |
+|  | Welcome to the Run Club Hub Discussion!    |  |
+|  | This is your space to connect with fellow  |  |
+|  | runners...                                 |  |
+|  +--------------------------------------------+  |
+|                                                  |
+|  +--------------------------------------------+  |
+|  | [ROUTES]  - Posted by Sarah K. - 2 days ago|  |
+|  | Best routes for a Sunday long run?         |  |
+|  | Looking for something scenic around 12km.. |  |
+|  |  > Mike T: The riverside loop is great!    |  |
+|  +--------------------------------------------+  |
+|                                                  |
+|  +--------------------------------------------+  |
+|  | [RACING]  - Posted by Dan R. - 4 days ago  |  |
+|  | Anyone targeting a sub-25 5K this season?  |  |
+|  |  > Emma W: I am! Let's coordinate a run.   |  |
+|  +--------------------------------------------+  |
+|                                                  |
+|  +--------------------------------------------+  |
+|  | [TRAINING] - Posted by Priya M. - 6 days   |  |
+|  | Favourite recovery tips after a long run?  |  |
+|  |  > Tom B: Foam rolling and protein meal!   |  |
+|  +--------------------------------------------+  |
++--------------------------------------------------+
+|  FOOTER                                          |
++--------------------------------------------------+
 
 ## User Goals and Stories
 
@@ -289,7 +398,7 @@ The live site is deployed on Heroku:
 
 ### Local Development
 
-1. Clone the repository: `git clone https://github.com/your-username/run-club-hub.git`
+1. 1. Clone the repository: `git clone https://github.com/AxelAxel97/run-club-hub.git`
 2. Create a virtual environment: `python3 -m venv venv`
 3. Activate it: `source venv/bin/activate`
 4. Install dependencies: `pip install -r requirements.txt`
@@ -298,7 +407,6 @@ The live site is deployed on Heroku:
 7. Access at: http://127.0.0.1:8000/
 
 ---
-
 ## Credits
 
 - [Django Documentation](https://docs.djangoproject.com/) - framework reference
@@ -309,6 +417,32 @@ The live site is deployed on Heroku:
 - [dj-database-url](https://github.com/jazzband/dj-database-url) - database URL configuration
 - [CI Python Linter](https://pep8ci.herokuapp.com/) - Python code validation
 - [Favicon.io](https://favicon.io/) - favicon generation
+
+### Content
+
+- The format and template for the README file was inspired by the [Code Institute](https://codeinstitute.net/ie/)
+
+- The hero image was sourced from [Unsplash](https://unsplash.com/)
+
+- The discussion board content and event fixture data were written specifically for this project
+
+### Coding Help
+
+- The Django documentation was one of the main resources used throughout development - [Django Documentation](https://docs.djangoproject.com/)
+- A lot of the Python and Django coding was supported by tutorials at [W3Schools](https://www.w3schools.com/)
+- Bootstrap 5 documentation was used extensively for layout and components - [Bootstrap Docs](https://getbootstrap.com/docs/5.3/)
+- Stack Overflow was used to help solve minor Django related bugs throughout development
+- The following YouTube tutorials were helpful during development:
+  - [Learn Django in 20 Minutes - Tech With Tim](https://www.youtube.com/watch?v=nGIg40xs9e4)
+  - [Python Django Tutorial - Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTtoQCKZ03TU5fNfx2UY6U4p)
+- The CI Python Linter was used to validate all Python files - [CI Python Linter](https://pep8ci.herokuapp.com/)
+- [dj-database-url](https://github.com/jazzband/dj-database-url) was used to configure the PostgreSQL database URL on Heroku
+- [WhiteNoise documentation](http://whitenoise.evans.io/) was used to configure static file serving in production
+- [Favicon.io](https://favicon.io/) was used to generate the site favicon
+- The following projects were used as inspiration - [HappyTravels](https://github.com/d-lynch95/Portfolio-Project4), [SizzleAndSteak](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak), [TennisBuddies](https://github.com/lucia2007/tennis_buddies)
+- I received support and advice from the Code Institute, special thanks to Nikki Haig! 
+
+
 
 
 
